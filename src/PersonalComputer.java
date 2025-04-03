@@ -1,15 +1,15 @@
-public class PersonalComputer extends Product {
-    private ComputerCase computerCase;
+public class PersonalComputer extends Product{
     private Monitor monitor;
-    private MotherBoard motherBoard;
+    private Motherboard motherboard;
+    private ComputerCase computerCase;
 
-    public PersonalComputer(String model, String manufacturer, ComputerCase computerCase, Monitor monitor, MotherBoard motherBoard) {
-        super(model, manufacturer);
-        this.computerCase = computerCase;
+    public PersonalComputer(String model,String manufacturer,
+                            Monitor monitor,Motherboard motherboard,ComputerCase computerCase) {
+        super(model,manufacturer);
         this.monitor = monitor;
-        this.motherBoard = motherBoard;
+        this.motherboard = motherboard;
+        this.computerCase =computerCase;
     }
-
     private void drawLogo(){
         monitor.drawPixelAt(1200,50,"yellow");
     }
@@ -19,15 +19,16 @@ public class PersonalComputer extends Product {
         drawLogo();
     }
 
-//    public ComputerCase getComputerCase() {
-//        return computerCase;
-//    }
-//
 //    public Monitor getMonitor() {
 //        return monitor;
 //    }
 //
-//    public MotherBoard getMotherBoard() {
-//        return motherBoard;
+//    public Motherboard getMotherboard() {
+//        return motherboard;
 //    }
+//
+//    public ComputerCase getComputerCase() {
+//        return computerCase;
+//    }
+
 }

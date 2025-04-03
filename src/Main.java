@@ -1,15 +1,17 @@
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        ComputerCase theCase = new ComputerCase("2208","Dell","240");
-        Monitor theMonitor= new Monitor("27inch Beast","Acer",27,"2540x1440");
-        MotherBoard theMotherBoard= new MotherBoard("BJ-200","Asus",4,6,"v2.44");
+        ComputerCase theCase = new ComputerCase("2208","Dell");
+        Monitor theMonitor = new Monitor("27Inch Beast","Acer",
+                27, "2540 x 1440");
+        Motherboard theMotherboard = new Motherboard("BJ-200","Asus",
+                4,6,"v2.44");
 
-        PersonalComputer thePC = new PersonalComputer("2208","Dell",theCase,theMonitor,theMotherBoard);
+        PersonalComputer thePc = new PersonalComputer("2208","Dell",
+                theMonitor,theMotherboard,theCase);
 
-//        thePC.getMonitor().drawPixelAt(10,12,"red");
-//        thePC.getMotherBoard().loadProgram("Windows OS");
-//        thePC.getComputerCase().pressPowerButton();
-
-        thePC.powerUp();
+//        thePc.getMonitor().drawPixelAt(10,10,"yellow");
+//        thePc.getMotherboard().loadProgram("Windows OS");
+//        thePc.getComputerCase().pressPowerButton();
+        thePc.powerUp();
     }
 }
